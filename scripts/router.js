@@ -12,12 +12,12 @@ router.setState = function(state, backState) {
   if (state.name == 'home' || state == null) {
     body.className = '';
     header.innerHTML = 'Journal Entries';
-    if (!backState) {history.pushState(state, "", "/Lab7/#settings");}
+    if (!backState) {history.pushState(state, "", "./scripts/Lab7/#settings");}
   }
   else if (state.name == 'settings') {
     body.className = 'settings';
     header.innerHTML = 'Settings';
-    if (!backState) {history.pushState({ page: "settings" }, "", "/Lab7/#settings");}
+    if (!backState) {history.pushState({ page: "settings" }, "", "./scripts/Lab7/#settings");}
   }
   else if (state.name == 'entry') {
     let newEntry = document.createElement("entry-page");
